@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818E235DF01000E35CAF /* LoginViewController.swift */; };
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
+		3A1E54C92B6EE1BA006C3505 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A1E54C82B6EE1BA006C3505 /* GoogleService-Info.plist */; };
 		4B1CB183BDCACDB52D4B2482 /* Pods_Flash_Chat_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDF2E5F40BCBCC79908D6E7 /* Pods_Flash_Chat_iOS13.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1DDF2E5F40BCBCC79908D6E7 /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1E54C82B6EE1BA006C3505 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44D787BBE1943AF32B0F1A71 /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
 		CBDC9245170037280FE3BD9B /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
+				3A1E54C82B6EE1BA006C3505 /* GoogleService-Info.plist */,
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
 				0B628194235DF03A00E35CAF /* Models */,
@@ -124,7 +127,6 @@
 				CBDC9245170037280FE3BD9B /* Pods-Flash Chat iOS13.debug.xcconfig */,
 				44D787BBE1943AF32B0F1A71 /* Pods-Flash Chat iOS13.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,6 +192,7 @@
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
+				3A1E54C92B6EE1BA006C3505 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
@@ -395,13 +398,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = SX32JKAL2M;
 				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.Flash-Chat-iOS13";
+				PRODUCT_BUNDLE_IDENTIFIER = "po.project15.Flash-Chat-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -414,13 +417,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = SX32JKAL2M;
 				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.appbrewery.Flash-Chat-iOS13";
+				PRODUCT_BUNDLE_IDENTIFIER = "po.project15.Flash-Chat-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
