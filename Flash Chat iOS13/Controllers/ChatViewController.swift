@@ -15,11 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
-    var messages: [Message] = [
-        Message(sender: "123@123.com", body: "Hey"),
-        Message(sender: "123@123.com", body: "Hello"),
-        Message(sender: "123@123.com", body: "Nice")
-    ]
+    var messages: [Message] = []
     
     let db = Firestore.firestore()
     
@@ -30,6 +26,31 @@ class ChatViewController: UIViewController {
         tableView.delegate = self
         
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        
+        loadMessages()
+    }
+    
+    func loadMessages(){
+        
+        db.collection(Constants.Fstore.collectionName).getDocuments { query, err in
+            if let e = err{
+                print("Error \(e)")
+            } else {
+                if let documents = query?.documents {
+                    documents.forEach { doc in
+                        let data = doc.data()
+                        if let sender = data["sender"] as? String, let message = data["body"] as? String{
+                            let newMessage = Message(sender: sender, body: message)
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
