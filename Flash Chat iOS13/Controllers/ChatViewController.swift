@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ChatViewController: UIViewController {
 
@@ -20,6 +21,8 @@ class ChatViewController: UIViewController {
         Message(sender: "123@123.com", body: "Nice")
     ]
     
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -30,6 +33,13 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(Constants.Fstore.collectionName).addDocument(data: ["sender": messageSender, "body": messageBody ]) { (err) in
+                if let e = err {
+                    print("Error \(e)")
+                }
+            }
+        }
     }
     
 
